@@ -1,0 +1,30 @@
+5G PHY
+SIB Internal
+MIB Internal
+OFDM Symbols
+Carrier Aggregiation (LTE/5G)
+Subfrmae (4ms - time - 10ms)
+Slice
+Frequency and speed 
+5G better IEs
+Massive MIMO
+RRM + RRC
+Power on & Cell Search
+RACH preamble : Zaddoff Chu sequence
+FDD/TDD : duplexing mode in which SIB
+How UE knows if mode is FDD/TDD
+PHICH
+SSS and PSS
+SSB
+OFDM symbols
+Number of RB/ Number of Subcarier
+Null Subcariers
+CFI
+CFI imp?
+PDCCH
+RACH procedural Steps
+Contention free and Contention based
+OOPS
+Template
+NAS msg (attached in any RRC or not)
+Last attach RRC msg?
