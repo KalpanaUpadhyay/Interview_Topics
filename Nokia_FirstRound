@@ -28,3 +28,110 @@ OOPS
 Template
 NAS msg (attached in any RRC or not)
 Last attach RRC msg?
+
+
+Imp Questions:
+1. 5G PHY Layer & OFDM
+What modulation techniques are used in 5G NR?
+How does OFDM differ between LTE and 5G?
+What is the significance of subcarrier spacing in 5G NR?
+Why does 5G use scalable numerology?
+What are the different types of cyclic prefix in 5G?
+What is an OFDM symbol? How is its duration calculated?
+Explain the difference between OFDM, SC-FDMA, and DFT-s-OFDM.
+What are null subcarriers and why are they used?
+What’s the maximum number of OFDM symbols in a slot in 5G?
+How is a 5G frame structured?
+✅ 2. SSB, SSS, PSS, and Synchronization
+What is the purpose of SSB (Synchronization Signal Block) in 5G?
+What is the difference between PSS and SSS in 5G?
+How does a UE perform initial synchronization in 5G?
+What is the structure and content of an SSB?
+How is SSB beam sweeping used in 5G?
+✅ 3. MIB and SIB Internals
+What information is conveyed in the MIB in LTE and 5G?
+What SIBs are mandatory for initial UE attachment?
+How does the UE decode SIB1?
+How are SIBs scheduled and transmitted in LTE vs 5G?
+What is the role of SIB5 in LTE?
+In which duplexing mode is each SIB transmitted?
+How does the UE know whether the system is FDD or TDD?
+How is the scheduling of SIBs handled in TDD?
+✅ 4. RACH Procedure & Zadoff-Chu
+What is the purpose of RACH?
+Explain the contention-based and contention-free RACH procedures.
+What are the steps in the RACH procedure?
+What is the role of Zadoff-Chu sequences in RACH?
+How is the RACH preamble selected?
+How does the network handle RACH collisions?
+What is the RACH window size?
+✅ 5. Duplexing Modes (FDD/TDD)
+What are the main differences between FDD and TDD?
+What are the advantages and disadvantages of TDD over FDD?
+In which scenarios is TDD preferred?
+How does the UE determine whether the network is operating in FDD or TDD?
+✅ 6. Carrier Aggregation (LTE & 5G)
+What is carrier aggregation and why is it used?
+What are the different types of carrier aggregation?
+How many component carriers can be aggregated in LTE? In 5G?
+What is the role of Primary Cell (PCell) and Secondary Cell (SCell)?
+How is cross-carrier scheduling handled?
+How is uplink and downlink CA configured?
+✅ 7. Resource Blocks and Subcarriers
+How many subcarriers are there in a Resource Block?
+How many Resource Blocks are available in 20 MHz bandwidth in LTE?
+How does subcarrier spacing affect the number of RBs in 5G?
+What is the impact of numerology on bandwidth?
+How is frequency-domain resource allocation handled?
+✅ 8. Power On, Cell Search, and Synchronization
+Describe the steps UE takes during power-on and initial cell search.
+What happens after UE synchronizes with the cell?
+How is frequency and time synchronization achieved?
+What is the role of PSS/SSS in cell search?
+What does the UE do after decoding MIB?
+✅ 9. PHICH, CFI, PDCCH
+What is PHICH and what is its role in LTE?
+What is the difference between PHICH in LTE and 5G?
+What is the Control Format Indicator (CFI) and why is it important?
+How is the PDCCH used to schedule downlink and uplink resources?
+What is the DCI format used in PDCCH?
+✅ 10. Slicing
+What is network slicing in 5G?
+What are the different types of network slices (e.g., eMBB, URLLC, mMTC)?
+How does slicing impact RAN and core?
+How is a slice identified during UE registration?
+✅ 11. RRC and RRM
+What are the main functions of RRC in LTE and 5G?
+What are the RRC states in LTE and 5G?
+What is the difference between RRC_IDLE and RRC_CONNECTED?
+What is RRM and how is it used in mobility?
+What measurement events are used for handover decisions?
+✅ 12. Massive MIMO & Beamforming
+What is Massive MIMO and how does it help in 5G?
+What’s the difference between digital, analog, and hybrid beamforming?
+How is beamforming implemented at the physical layer?
+How are beams tracked by the UE?
+✅ 13. Frequencies and Speed
+What is the frequency range of LTE and 5G?
+What is the difference between FR1 and FR2 in 5G?
+How does higher frequency affect data rates and coverage?
+How does carrier bandwidth impact throughput?
+✅ 14. Miscellaneous
+How is latency improved in 5G over LTE?
+What is mini-slot scheduling?
+What is dynamic TDD?
+What is HARQ and how is it used in both LTE and 5G?
+How does 5G achieve ultra-reliable low-latency communication (URLLC)?
+✅ 15. Interview Drill-Down Traps (Follow-ups)
+These may follow after you answer a core question:
+"What happens if UE fails to decode SIB1?"
+"Can RACH preamble be reused in the same cell?"
+"How does UE differentiate between multiple SSB beams?"
+"How does 5G handle mobility differently from LTE?"
+"What’s the use of DMRS in 5G uplink?"
+🔁 Real-World Scenarios/Case Studies
+“You see RACH failures in a log, what could be the reasons?”
+“If UE is not able to receive SIB1, what troubleshooting steps would you take?”
+“How can PHICH misconfiguration affect uplink throughput?”
+“Why would a UE fail during the contention resolution step?”
+ 
