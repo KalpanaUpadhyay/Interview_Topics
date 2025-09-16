@@ -1,0 +1,993 @@
+Advanced C++ Course for Experienced Engineers
+📌 Target Audience:
+Software engineers with 5+ years of experience in C++, or developers proficient in other languages looking to master modern C++.
+
+📚 Course Structure:
+Duration: 10–12 weeks (adjustable based on pace)
+
+Mode: Self-paced or instructor-led
+
+Style: Hands-on with code labs, projects, and exercises
+
+Tools: GCC/Clang/MSVC, CMake, gdb/lldb, Valgrind, clang-tidy, cppcheck
+
+🗂️ Course Breakdown
+🔹 Module 1: Modern C++ Foundations (C++11/14)
+Duration: 1 week
+
+Goal: Refresh and modernize your C++ basics
+
+RAII (Resource Acquisition Is Initialization)
+
+Smart pointers: unique_ptr, shared_ptr, weak_ptr
+
+Move semantics and rvalue references
+
+Lambda functions
+
+Auto and decltype
+
+Range-based for loops
+
+nullptr, enum class
+
+override, final, =delete, =default
+
+🔧 Hands-on:
+
+Convert legacy code to modern C++
+
+Implement a custom smart pointer
+
+🔹 Module 2: STL Mastery & Algorithms
+Duration: 1.5 weeks
+
+Goal: Deep dive into STL containers and algorithms
+
+Vectors, maps, sets, unordered containers
+
+Iterators and iterator traits
+
+STL algorithms (transform, accumulate, etc.)
+
+std::function, std::bind
+
+Functors, lambdas in STL
+
+Allocators (advanced)
+
+🔧 Hands-on:
+
+Build a custom allocator
+
+Functional-style pipeline with STL
+
+🔹 Module 3: Templates and Metaprogramming
+Duration: 1.5 weeks
+
+Goal: Become fluent in template-based design
+
+Function and class templates
+
+Variadic templates
+
+SFINAE and enable_if
+
+CRTP (Curiously Recurring Template Pattern)
+
+Concepts (C++20)
+
+Type traits and std::is_*
+
+Fold expressions (C++17)
+
+🔧 Hands-on:
+
+Implement type-safe builder pattern using templates
+
+Design a compile-time vector
+
+🔹 Module 4: Object-Oriented and Design Patterns in C++
+Duration: 1 week
+
+Goal: Use modern C++ for clean, scalable architecture
+
+Inheritance, polymorphism, abstract classes
+
+Composition vs. inheritance
+
+Rule of 3/5/0
+
+Pimpl idiom
+
+Key design patterns: Factory, Singleton, Observer, Strategy, Visitor
+
+Dependency injection in C++
+
+🔧 Hands-on:
+
+Refactor legacy class hierarchy
+
+Implement multiple patterns in a mini framework
+
+🔹 Module 5: Concurrency and Multithreading
+Duration: 1 week
+
+Goal: Build safe and efficient multithreaded applications
+
+std::thread, std::async, std::future
+
+Mutexes, condition variables
+
+Atomics and memory ordering
+
+Thread-safe containers
+
+Thread pools and work queues
+
+Coroutine basics (C++20)
+
+🔧 Hands-on:
+
+Implement a producer-consumer queue
+
+Build a simple thread pool
+
+🔹 Module 6: Advanced C++ Features (C++17/20/23)
+Duration: 1.5 weeks
+
+Goal: Get proficient in the latest language standards
+
+Structured bindings
+
+if constexpr
+
+std::variant, std::optional, std::any
+
+Ranges and views (C++20/23)
+
+Coroutines deep dive
+
+Modules (C++20+)
+
+Reflection (early stage in C++23)
+
+🔧 Hands-on:
+
+Create a lazy evaluation pipeline using ranges
+
+Use coroutines to simulate cooperative multitasking
+
+🔹 Module 7: Build Systems, Tooling, and Testing
+Duration: 1 week
+
+Goal: Master the ecosystem around C++
+
+CMake (modern targets, interface libraries)
+
+Linking, static vs dynamic
+
+Debugging with gdb/lldb
+
+Sanitizers (ASan, UBSan, TSan)
+
+clang-tidy, cppcheck, include-what-you-use
+
+Unit testing with Google Test / Catch2
+
+Benchmarking with Google Benchmark
+
+🔧 Hands-on:
+
+Build, test, and optimize a small real-world project
+
+🔹 Module 8: Performance and Low-Level C++
+Duration: 1 week
+
+Goal: Understand what happens under the hood
+
+Cache-aware programming
+
+Manual memory management
+
+Inline assembly (optional)
+
+Compiler optimizations and profiling
+
+False sharing, cache line alignment
+
+Memory pools and arenas
+
+🔧 Hands-on:
+
+Profile and optimize a hot loop
+
+Write a custom memory pool
+
+🔹 Module 9: Embedded / Systems / Game / Finance (Pick a Track)
+Duration: Optional track-based specialization (1–2 weeks)
+
+Embedded: Bare-metal C++, real-time OS integration
+
+Game Dev: Game loops, ECS architecture, SFML or Unreal
+
+Systems: Custom allocators, kernel-style concurrency
+
+Finance: Low-latency design, FIX protocol, zero-copy
+
+🔧 Capstone Project:
+Build a mini engine/framework/tool relevant to your track.
+
+🎓 Final Project (Capstone)
+Design, implement, test, and optimize a complete project such as:
+
+A C++ game engine subsystem
+
+A high-performance web server
+
+An async task scheduler with coroutines
+
+A custom serialization library with concepts and templates
+
+🧠 Additional Reading & References
+Books:
+
+Effective Modern C++ by Scott Meyers
+
+C++ Concurrency in Action by Anthony Williams
+
+C++ Templates: The Complete Guide by Vandevoorde & Josuttis
+
+Programming Principles and Practice Using C++ by Bjarne Stroustrup
+
+Web:
+
+cppreference.com
+
+Compiler Explorer (godbolt.org)
+
+ISO C++ GitHub discussions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Modern C++ and Systems Programming Course Roadmap
+🔧 Tools Used:
+GCC (C++20 or later)
+
+CMake
+
+gdb/lldb
+
+clang-tidy, cppcheck
+
+GoogleTest
+
+Valgrind
+
+🗂️ Weekly Breakdown
+Each week has:
+
+✅ Topics to study
+
+🛠️ Exercises to implement
+
+❓ Questions to reflect or code
+
+✅ Week 1: Modern C++ Foundations (C++11/14/17)
+Topics:
+auto, decltype, range-for
+
+Smart pointers: unique_ptr, shared_ptr
+
+Move semantics, rvalue/lvalue, std::move
+
+Lambdas, =default, =delete, override, final
+
+Coding Tasks:
+Create a class with move constructor + unique_ptr usage
+
+Refactor raw pointers to smart pointers
+
+Write lambdas that capture variables (by ref, by value, by move)
+
+Practice Questions:
+Difference between std::move and copying?
+
+When do you need a custom move constructor?
+
+How does smart pointer ownership work?
+
+✅ Week 2: STL Mastery & Algorithms
+Topics:
+Vectors, maps, sets, unordered containers
+
+Iterators, iterator traits
+
+STL algorithms: transform, accumulate, for_each, sort, find_if
+
+std::function, std::bind, function objects
+
+Coding Tasks:
+Build a frequency map of words using unordered_map
+
+Implement custom comparator in std::sort
+
+Use std::accumulate to sum over a vector of structs
+
+Practice Questions:
+Difference between map and unordered_map?
+
+What is iterator invalidation?
+
+How do functors differ from lambdas?
+
+✅ Week 3: Templates & Compile-Time Programming
+Topics:
+Function and class templates
+
+Variadic templates
+
+Type traits: std::is_same, std::enable_if
+
+CRTP
+
+if constexpr, fold expressions
+
+Coding Tasks:
+Implement a type-safe container using templates
+
+Write a compile-time sum using variadic templates
+
+Use SFINAE to disable a function for certain types
+
+Practice Questions:
+What is SFINAE and how is it useful?
+
+When would you use CRTP?
+
+What is the difference between constexpr and consteval?
+
+✅ Week 4: Object-Oriented Design in Modern C++
+Topics:
+Composition vs Inheritance
+
+Rule of 3/5/0
+
+Virtual functions, vtables
+
+PIMPL idiom
+
+Design patterns: Factory, Strategy, Observer, Visitor
+
+Coding Tasks:
+Implement Strategy and Observer patterns
+
+Use PIMPL to hide implementation
+
+Demonstrate Rule of 5 in a resource manager class
+
+Practice Questions:
+When should you prefer composition?
+
+What's the difference between final and override?
+
+How does dynamic dispatch work in C++?
+
+✅ Week 5: Multithreading and Concurrency
+Topics:
+std::thread, std::async, std::future
+
+std::mutex, std::lock_guard, std::unique_lock
+
+std::condition_variable
+
+Atomics: std::atomic, memory orderings
+
+Coroutines (intro only)
+
+Coding Tasks:
+Build a producer-consumer system
+
+Implement a thread pool
+
+Use atomics to protect a counter
+
+Practice Questions:
+What causes a data race? How do you prevent it?
+
+What's the difference between spinlocks and mutexes?
+
+What are coroutines and when would you use them?
+
+✅ Week 6: C++17/20/23 Features
+Topics:
+Structured bindings, if constexpr
+
+std::variant, std::optional, std::any
+
+Concepts, ranges, views
+
+Coroutines and co_await, co_yield
+
+[[nodiscard]], consteval, modules
+
+Coding Tasks:
+Use variant for a simple state machine
+
+Create a concept-constrained template
+
+Use ranges::views::filter to filter data
+
+Practice Questions:
+When should you use variant over polymorphism?
+
+How are concepts better than enable_if?
+
+What's the difference between constexpr and consteval?
+
+✅ Week 7: Build Systems and Tooling
+Topics:
+Modern CMake: targets, interface libraries, transitive properties
+
+clang-tidy, cppcheck
+
+GoogleTest & Catch2
+
+valgrind, address sanitizer
+
+Coding Tasks:
+Write a test suite using GoogleTest
+
+Add CI checks using clang-tidy
+
+Add memory checks with valgrind
+
+Practice Questions:
+What are interface targets in CMake?
+
+How do sanitizers help during development?
+
+What’s the benefit of clang-tidy over just using -Wall?
+
+✅ Week 8: Performance & Low-Level Programming
+Topics:
+Cache alignment, false sharing
+
+Data-oriented design
+
+Manual memory management
+
+aligned_alloc, malloc, placement new
+
+Profiling: perf, gprof, valgrind --tool=callgrind
+
+Coding Tasks:
+Profile and optimize a slow loop
+
+Implement a custom memory arena
+
+Analyze cache behavior in a data layout example
+
+Practice Questions:
+What is false sharing? How do you avoid it?
+
+How do memory pools improve performance?
+
+When should you use placement new?
+
+✅ Week 9–10: Capstone Project (Pick 1)
+Choose one based on interest:
+
+🔄 Async Task Scheduler using threads + coroutines
+
+🧠 Simple ECS (Entity-Component-System) Framework
+
+⚙️ Custom Serialization Library using concepts + templates
+
+🧵 Custom Lock-Free Queue using atomics
+
+🔁 Weekly Workflow
+For each week:
+
+Read theory (book chapter / cppreference / blog)
+
+Code ~2–4 core tasks
+
+Answer 3–5 deep questions (see above)
+
+Push code to your GitHub repo (modules/week_X)
+
+Track progress in a progress.md log
+
+🧠 Optional Study Resources
+📘 Effective Modern C++ – Scott Meyers
+
+📘 C++ Concurrency in Action – Anthony Williams
+
+📘 C++ High Performance – Viktor Sehr
+
+🖥️ Compiler Explorer (Godbolt)
+
+📺 CppCon YouTube Channel
+
+
+
+
+
+POinters in detail
+📌 C Pointers Mastery Study Plan
+🎯 Goal: Understand, use, and master every type of pointer in C
+🧠 Target Level: Intermediate to Advanced
+🗓️ Duration: 5–7 Days (~1 topic per day)
+🔧 Tools Needed:
+GCC or Clang
+
+gdb debugger
+
+Valgrind (for memory checks)
+
+Basic C IDE (or just VSCode + terminal)
+
+📚 Day-by-Day Pointer Study Plan
+✅ Day 1: Pointer Basics & Pointer Arithmetic
+Topics:
+What is a pointer? What does it store?
+
+Declaring and initializing pointers
+
+* vs & operators
+
+Pointer dereferencing
+
+Pointer arithmetic: ptr + 1, ptr++, *(ptr + i)
+
+Practice:
+Declare an int*, assign it to an integer variable
+
+Walk through an array using pointer arithmetic
+
+Predict output of pointer increment/decrement
+
+Questions:
+What happens if you dereference an uninitialized pointer?
+
+Difference between *p++ vs (*p)++?
+
+✅ Day 2: Pointers and Arrays
+Topics:
+Relationship between arrays and pointers
+
+Array indexing vs pointer arithmetic
+
+char*, int* with arrays
+
+Pointer decay
+
+Practice:
+Implement your own version of strlen() using a char*
+
+Loop through an array of struct using pointers
+
+Questions:
+Why can't you assign a new value to an array name?
+
+What’s the difference between int arr[] and int* arr in function parameters?
+
+✅ Day 3: Pointer to Pointer (**) and Multidimensional Arrays
+Topics:
+Pointers to pointers (int **ptr)
+
+Dynamically allocating 2D arrays
+
+Row-major vs column-major storage
+
+Practice:
+Allocate and free a 2D array using malloc
+
+Implement matrix input/output using double pointers
+
+Questions:
+How does **ptr work under the hood?
+
+What's the safest way to deallocate a 2D matrix?
+
+✅ Day 4: Function Pointers
+Topics:
+Syntax of function pointers
+
+Calling functions through pointers
+
+Function pointer arrays
+
+Callbacks using function pointers
+
+Practice:
+Implement a calculator using function pointer array
+
+Create a sorting function that takes a comparator function pointer (like qsort())
+
+Questions:
+What's the difference between int (*fptr)(int) and int *fptr(int)?
+
+How are function pointers useful in embedded or event-driven systems?
+
+✅ Day 5: Void Pointers and Generic Programming
+Topics:
+void* type and casting
+
+Generic data handling using void*
+
+Risks and use cases (e.g., in qsort(), custom allocators)
+
+Practice:
+Implement a simple print function using void* and type tags
+
+Use qsort() on an array of structs
+
+Questions:
+Why can't you dereference a void* directly?
+
+How do you safely cast a void* back to its original type?
+
+✅ Day 6: Pointers with Structs and Memory Management
+Topics:
+Struct pointers: (*ptr).member vs ptr->member
+
+Dynamic allocation of structs
+
+Nested struct pointers
+
+Practice:
+Allocate and manipulate a list of dynamically allocated structs
+
+Create a linked list of structs with next pointer
+
+Questions:
+What happens if you free() only part of a nested structure?
+
+What is a "shallow" vs "deep" copy of a pointer-based struct?
+
+✅ Day 7: Common Pitfalls and Debugging
+Topics:
+Dangling pointers
+
+Double free / memory leaks
+
+Segfaults and invalid dereferences
+
+Use-after-free
+
+Tools: Valgrind and gdb
+
+Practice:
+Write code that intentionally causes:
+
+Memory leak
+
+Dangling pointer
+
+Buffer overrun
+
+Debug it using gdb and fix it
+
+Run with Valgrind to verify memory safety
+
+Questions:
+Why is double free() dangerous?
+
+How can you detect uninitialized pointer use?
+
+📁 Bonus: Types of Pointers to Know (C Summary)
+Pointer Type	Description	Example
+Basic Pointer	Points to any type	int *p = &x;
+Null Pointer	Points to nothing (NULL or nullptr in C++)	int *p = NULL;
+Void Pointer	Generic pointer to any type	void *p = &x;
+Pointer to Pointer	Points to another pointer	int **pp = &p;
+Array Pointer	Points to first element of array	int *p = arr;
+Function Pointer	Points to a function	int (*fp)(int) = &square;
+Struct Pointer	Points to a struct	struct Point *p = &pt;
+Const Pointer	Points to a const value or has fixed address	const int *p, int *const
+
+✅ Final Recommendations
+📘 Books:
+
+C Programming Language by Kernighan and Ritchie (K&R)
+
+Pointers on C by Kenneth Reek
+
+🛠️ Tools:
+
+Valgrind
+
+GDB cheat sheet
+
+Interview Practice:
+
+Reverse a linked list
+
+Implement malloc/free
+
+Detect loop in a linked list
+
+Write a memory allocator using void*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Operatiin system
+
+
+
+ Operating Systems – Full Course & Study Plan
+🎯 Goal: Build deep foundational knowledge of OS concepts
+💻 Target Level: Intermediate to Advanced
+🗓️ Duration: 6–8 weeks (flexible per topic)
+🔧 Prerequisites:
+Proficiency in C or C++
+
+Basic knowledge of computer architecture
+
+Familiarity with pointers, memory, and binary data
+
+📦 Tools Required:
+OS: Linux (Ubuntu or similar)
+
+C Compiler: gcc, gdb, make
+
+Editors: VSCode or Vim
+
+Virtualization: QEMU (for kernel-level experiments), Docker (for process/container work)
+
+📚 Week-by-Week Detailed Breakdown
+✅ Week 1: Introduction to Operating Systems & Architecture
+📘 Topics:
+What is an OS? Its purpose and roles
+
+User space vs Kernel space
+
+System calls and kernel interface
+
+Types of OS: monolithic, microkernel, hybrid, exokernel
+
+OS boot process
+
+🛠️ Practice:
+Use strace to trace system calls of a command
+
+Read from /proc to explore process information
+
+❓ Questions:
+What happens from power-on to shell prompt?
+
+Why do we need protected memory?
+
+✅ Week 2: Processes and Threads
+📘 Topics:
+Process lifecycle: creation, execution, termination
+
+Process Control Block (PCB)
+
+Context switching
+
+Threads: user vs kernel threads
+
+Multithreading models
+
+🛠️ Practice:
+Implement a simple thread using pthread_create
+
+Trace process creation with fork(), exec(), wait()
+
+❓ Questions:
+How is a thread different from a process?
+
+What causes context switching?
+
+✅ Week 3: CPU Scheduling
+📘 Topics:
+Scheduling goals and criteria
+
+Algorithms: FCFS, SJF, Round Robin, Priority
+
+Multilevel queues, MLFQ
+
+Preemption and starvation
+
+🛠️ Practice:
+Write a CPU scheduler simulation in C
+
+Use top, htop, and ps to analyze scheduling behavior
+
+❓ Questions:
+Why is Round Robin preferred in time-sharing systems?
+
+How does Linux schedule threads?
+
+✅ Week 4: Memory Management
+📘 Topics:
+Physical vs logical memory
+
+Paging, segmentation
+
+Virtual Memory and address translation
+
+Page tables, TLB
+
+Memory protection and isolation
+
+🛠️ Practice:
+Use mmap() to allocate memory
+
+Print your program’s memory map (cat /proc/$$/maps)
+
+❓ Questions:
+What is a page fault?
+
+What is the difference between heap, stack, data, and text segments?
+
+✅ Week 5: Synchronization & Concurrency
+📘 Topics:
+Race conditions and critical sections
+
+Mutexes, semaphores, spinlocks
+
+Deadlock: prevention, avoidance, detection
+
+Classic problems: Producer-Consumer, Dining Philosophers
+
+🛠️ Practice:
+Implement a semaphore using pthread
+
+Write a multi-threaded counter with race condition, then fix it
+
+❓ Questions:
+What are the four Coffman conditions for deadlock?
+
+When should you use a spinlock over a mutex?
+
+✅ Week 6: File Systems
+📘 Topics:
+File structure and metadata (inode, FAT, ext4)
+
+File descriptors, open/read/write/close
+
+Mounting, directories, symbolic vs hard links
+
+Journaling and caching
+
+🛠️ Practice:
+Explore /etc/fstab, /proc/mounts
+
+Implement a toy virtual file system in C
+
+Write a program using only low-level file I/O (open(), read())
+
+❓ Questions:
+How does the OS find a file by name?
+
+What happens during open("file.txt")?
+
+✅ Week 7: I/O Systems & Devices
+📘 Topics:
+Blocking vs non-blocking I/O
+
+I/O scheduling
+
+DMA and interrupts
+
+Device drivers (overview)
+
+Terminal, disk, and network device abstractions
+
+🛠️ Practice:
+Use dd, iostat, vmstat to monitor I/O
+
+Use epoll or select() to wait on multiple file descriptors
+
+❓ Questions:
+How does the OS talk to hardware?
+
+What is the role of an interrupt?
+
+✅ Week 8: Advanced Topics + OS Internals
+📘 Topics:
+Kernel modules and compilation
+
+Linux process scheduler (CFS)
+
+Virtualization (KVM, QEMU)
+
+Containers vs VMs
+
+Security: privilege levels, user namespaces
+
+🛠️ Practice:
+Load a simple Linux kernel module (hello world)
+
+Trace a syscall (read()) using strace and source code
+
+Create and run a container using Docker
+
+❓ Questions:
+How does containerization isolate processes?
+
+What is the difference between a kernel thread and user thread?
+
+🧪 Capstone Project Ideas (Pick One)
+Build a toy shell with job control and piping
+
+Write a toy memory allocator (like malloc)
+
+Implement a user-level thread library
+
+Design a mini virtual memory system with paging
+
+Create a multi-process server using fork() and select()
+
+📚 Recommended Books & Resources
+Resource	Description
+📘 Operating Systems: Three Easy Pieces (OSTEP)	Gold standard OS textbook (free online)
+📘 Modern Operating Systems – Andrew Tanenbaum	Academic deep-dive into OS theory
+📘 Linux Kernel Development – Robert Love	Focus on Linux internals
+💻 MIT 6.S081	Hands-on OS course with xv6 labs
+🛠️ man7.org	Linux syscalls and system programming reference
+🎥 CSE 120 (UCSD OS Course)	YouTube Lectures
+
+🧠 Interview OS Topics to Focus On
+Process vs Thread
+
+Virtual Memory & Page Tables
+
+Mutex vs Semaphore vs Spinlock
+
+Deadlock detection/prevention
+
+Fork/exec/wait lifecycle
+
+System calls vs function calls
+
+Stack vs Heap
+
+File descriptors & open/read/write
+
+How malloc() works internally
