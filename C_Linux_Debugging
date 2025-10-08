@@ -1,0 +1,22 @@
+GDB Usecases
+Version control: Git Usecases [Git stash , rename a branch, git stash apply/pop]
+Binary, Hexadecimal conversions
+find/remove kth node from the end
+2nd largest number in an array
+Why YANG and NETCONF
+Program memory allocation
+calloc vs realloc (continous or noncontinous)
+Main bugs I solved and how
+Explain yur work to a nontech person
+Volatile
+How compiler works: stages - like preprocessing and assembling
+Kernal space and how OS works
+Ehernet packet structure
+MAC address representation
+Broadcast vs multicast vs unicast
+puzzle of 8 balls, heavist ball for 2 weight chances
+Routing vs Switching
+Valgrind, Address Sanitiser
+Routing protocols
+
+
