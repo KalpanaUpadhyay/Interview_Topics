@@ -18,5 +18,6 @@ puzzle of 8 balls, heavist ball for 2 weight chances
 Routing vs Switching
 Valgrind, Address Sanitiser
 Routing protocols
+Structure padding in 16 bit or 32 bit registers and need of structure padding
 
 
