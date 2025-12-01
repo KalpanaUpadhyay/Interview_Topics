@@ -1,0 +1,166 @@
+Git interview guide — common use cases & commands
+
+Short, practical, and interview-ready notes for git stash, rename branch, git stash apply / pop, plus pitfalls & quick examples.
+
+1) git stash — why & when
+
+Use-case: you’re mid-change, need to switch branch or pull/rebase, but don’t want to commit unfinished work.
+What it does: saves working-directory + staged changes (by default) on a stack and reverts working tree to HEAD.
+
+Commands & examples
+
+Save changes:
+git stash
+
+Save with message:
+git stash push -m "WIP: fix auth bug"
+
+Include untracked files (new files not in index):
+git stash push -u -m "WIP + untracked" (-a includes ignored files too)
+
+List stashes:
+git stash list
+
+Show stash diff/details:
+git stash show stash@{0}
+git stash show -p stash@{0} (patch)
+
+Interview tip
+
+Explain that stash is stack-like (LIFO), and each stash is referenced as stash@{0}, stash@{1}, …
+
+2) git stash apply vs git stash pop
+
+Use-case: reapply stashed changes back onto your working tree.
+
+git stash apply [stash@{n}]
+
+Reapplies stash but keeps the stash in the stash list. Good when you want to re-use it or test multiple branches.
+
+git stash pop [stash@{n}]
+
+Reapplies and removes the stash on success. Equivalent to apply + drop.
+
+If conflicts occur when applying/popping: Git will stop and mark conflicts in files — resolve them and git add/git commit as usual.
+
+If pop fails and stash not dropped, it remains — safe. If pop succeeded but files partially merged, stash may be dropped; use git reflog to recover if needed.
+
+Example flow
+git stash push -m "WIP login"
+git checkout feature/other
+git stash apply        # reapply but stash remains
+# ... if good:
+git stash drop stash@{0}
+# or:
+git stash pop          # reapply and remove in one step
+
+Helpful commands
+
+Create branch from stash (safer when you want a dedicated branch):
+git stash branch my-wip-branch stash@{0}
+This creates my-wip-branch from the commit where stash was made and applies stash, then removes it.
+
+Drop a stash explicitly:
+git stash drop stash@{2}
+
+Clear all stashes:
+git stash clear
+
+3) Rename a branch — local & remote
+
+Use-case: branch name is wrong/typo or you want a clearer name.
+
+Rename local branch (you’re on it)
+git branch -m new-name
+
+
+Or explicitly:
+
+git branch -m old-name new-name
+
+Rename when checked-out on different branch
+git branch -m old-name new-name
+
+Update remote to reflect rename
+
+Push new branch and set upstream:
+
+git push origin -u new-name
+
+
+Delete old remote branch:
+
+git push origin --delete old-name
+# or
+git push origin :old-name
+
+
+(On other collaborators' clones) they should fetch and prune:
+
+git fetch origin --prune
+git branch -u origin/new-name new-name   # to set tracking
+
+If you must force-update remote (be careful)
+
+If remote history diverged or you intentionally rewrite, you might need git push --force-with-lease — prefer --force-with-lease over --force to avoid clobbering others' work.
+
+Interview tip
+
+Mention communicating branch renames to team and updating CI pipelines that reference old branch names.
+
+4) Common real-world scenarios (mini-cases)
+
+Quick fix, then revert: git stash && git checkout master && git pull && git checkout - && git stash pop
+
+Pull with local WIP: git stash push -m "WIP" && git pull --rebase && git stash pop
+
+Try WIP on a different branch without removing stash: git stash apply stash@{0} then later git stash pop or keep it for reuse.
+
+Recover lost changes: if you accidentally drop and need recovery, try git reflog to find stash commit-ish and git fsck --lost-found (advanced).
+
+5) Pitfalls & best practices (good interview talking points)
+
+Untracked files: git stash by default does NOT stash untracked files. Use -u if you want them included.
+
+Stash conflicts: treat like merge conflicts — resolve, git add, and commit.
+
+Stash is not a backup — avoid relying on stash for long-term storage; commit to a WIP branch if change is important.
+
+Renaming remote branch can break CI/deploy hooks — always inform team and update references.
+
+git stash pop removes stash only on success — if merge conflicts occur, stash might still be present (safer), but verify with git stash list.
+
+Multiple stashes — always annotate with -m so team members can recognize them.
+
+6) Short cheat-sheet (commands)
+# stash
+git stash                      # save changes
+git stash push -m "msg" -u     # stash + untracked
+git stash list                 # list
+git stash show -p stash@{0}    # view patch
+git stash apply stash@{0}      # reapply (keep stash)
+git stash pop stash@{0}        # reapply and remove
+git stash branch name stash@{0}# create branch from stash and apply
+
+# rename branch
+git branch -m old new          # rename local
+git push origin -u new         # push new remote and set upstream
+git push origin --delete old   # remove old remote branch
+
+# housekeeping
+git stash drop stash@{0}
+git stash clear
+
+7) Short mock-interview Qs you can expect (and one-liners to answer)
+
+Q: When would you use git stash vs. committing to a WIP branch?
+A: Use stash for short-term, experimental interruption; create a WIP branch when the changes are important, need sharing, or long-lived.
+
+Q: What’s the difference between git stash apply and pop?
+A: apply leaves the stash; pop removes it if apply succeeds.
+
+Q: How to rename a branch both locally and on remote?
+A: git branch -m old new && git push origin -u new && git push origin --delete old
+
+Q: What happens to untracked files with git stash?
+A: Not stashed by default — use git stash push -u to include them.
