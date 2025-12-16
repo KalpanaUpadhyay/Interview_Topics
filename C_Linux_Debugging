@@ -20,5 +20,15 @@ Valgrind, Address Sanitiser
 Routing protocols
 if n is divisible by 3 print 3 , if by 5 print world and if both print hello world
 Structure padding in 16 bit or 32 bit registers and need of structure padding
+Returning reference to local variable → dangling reference → undefined behavior.
+References do not need dereferencing (*) to access the value; they behave just like the original variable.
+References cannot be reseated.
+Returning a reference to a local variable causes undefined behavior — you're returning a variable that no longer exists after function ends.
+Reference is an alias for a variable. It cannot be NULL and must be initialized.
+Pointer is a variable storing address. It can be reassigned and can be NULL.
+ In the line "int* a, b;", how many pointers are declared?
+Many assume both a and b are pointers, but only a is a pointer — b is just an int.
+
+
 
 
